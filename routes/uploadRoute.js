@@ -1,20 +1,19 @@
 const express = require("express");
 const route = express.Router();
 const uploadMiddleware = require("../middleware/upload");
-const imageDB = require("../middleware/db");
+const { Image: imageDB } = require("../middleware/db");
 
 // Get Request
-route.get("/", (req, res) => {
-  imageDB
-    .find({})
-    .then((data) => {
-      res.render("gallery", {
-        results: data.reverse(),
-      });
-    })
-    .catch((err) => {
-      console.log(err);
+route.get("/", async (req, res) => {
+  try {
+    const data = await imageDB.find({}).sort({ createdAt: -1 });
+    res.render("gallery", {
+      results: data,
     });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Server Error");
+  }
 });
 
 module.exports = route;

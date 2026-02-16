@@ -1,23 +1,28 @@
-const express   = require("express")
-const app = express()
-const mongoose          =   require("mongoose");
+const mongoose = require("mongoose");
 
-
-mongoose.connect("mongodb+srv://olawooreifeoluea2004:opeyemi02@cluster0.3qr8fxu.mongodb.net/?retryWrites=true&w=majority")
-.then(()=>{
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log("Connection Successful");
-})
-.catch((err)=>{
-    console.log(err)
-})
+  } catch (err) {
+    console.log("Connection Failed:", err.message);
+    process.exit(1);
+  }
+};
 
+const uploadsSchema = new mongoose.Schema({
+  imageFileName: {
+    type: String,
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
 
-const uploads = new mongoose.Schema({
-    imageFileName: String
-})
+const Image = mongoose.model("image", uploadsSchema);
 
-const Image = new mongoose.model("image", uploads);
-
-module.exports  = Image
+module.exports = { Image, connectDB };
 
 

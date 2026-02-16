@@ -1,11 +1,15 @@
+require('dotenv').config();
 const express       =   require("express");
 const ejs           =   require('ejs')
-const bodyParser     =  require("body-parser");
 const PORT          =   process.env.PORT || 5500;
 
 
+const { connectDB } = require("./middleware/db");
+
 const app           =   express();
-app.use(bodyParser.urlencoded({extended: true}))
+connectDB();
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
@@ -28,9 +32,6 @@ app.get("/contact", (req,res)=>{
 })
 app.get("/recieptgenerator", (req,res)=>{
     res.render("recieptgenerator")
-})
-app.get("/contact", (req,res)=>{
-    res.render("contact")
 })
 app.get("/login", (req,res)=>{
     res.render("login")

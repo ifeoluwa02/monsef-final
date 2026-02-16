@@ -1,245 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Monsefmedia</title>
- <link rel="icon" type="image/png" sizes="72x72"  href="image/monsef-logo-removebg-preview.png">
- <meta name="keyword" content="monsef media"/>
- <meta name="author" content="mpnsefmedia">
- <link rel="stylesheet" href="index.css">
- <link rel="stylesheet" href="responsive.css">
- <!--<title>monsefmedia</title>-->
- <link rel="icon" type="image/png" sizes="72x72"  href="../image/monsef-logo-removebg-preview.png">
- <!-- <script src="./index.js"></script> -->
- <!-- <script src="./script.js"></script> -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
- <div class="body">
-    <!-- NAVBAR STARTS -->
-    <div class="navbar" >
+<%- include('partials/header') %>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active">
+                <img src="/image/hero1.jpg" alt="Photography">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content" data-aos="fade-right">
+                        <h1>Capturing Your Dreams In Every Frame</h1>
+                        <p>Welcome to Monsef Media and Entertainment. We bring your imagination to life through professional cinematic storytelling.</p>
+                        <a href="https://wa.me/+2348107575289" class="btn-primary">Book a Session</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide">
+                <img src="/image/hero2.png" alt="Photoshoot">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Professional Studio Sessions</h1>
+                        <p>Your story, our lens. We create timeless memories for your special moments.</p>
+                        <a href="/gallery" class="btn-primary">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-slide">
+                <img src="/image/hero3.png" alt="Event Coverage">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Unforgettable Event Coverage</h1>
+                        <p>Every moment matters. We cover your events with the expertise they deserve.</p>
+                        <a href="/contact" class="btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section section-padding" id="about-us">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-up">
+                    <span class="subtitle">About Us</span>
+                    <h2>Excellence Meets Creativity</h2>
+                    <p>Monsef Media and Entertainment specializes in photo studio brilliance, cinematic videos, and seamless event coverage, capturing extraordinary moments with authenticity and flair.</p>
+                    <p>From milestone celebrations to corporate events, our skilled team turns visions into vibrant stories. Our state-of-the-art studio and on-location coverage ensure every unique moment is beautifully immortalized.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-num">500+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="/image/hero5.png" alt="About Monsef Media">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-teaser section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">What We Do</span>
+                <h2>Our Specialized Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <i class="fa-solid fa-camera"></i>
+                    <h3>Photography</h3>
+                    <p>Professional studio and outdoor sessions for individuals, families, and brands.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-video"></i>
+                    <h3>Video Coverage</h3>
+                    <p>Cinematic event filming and documentary production with high-end equipment.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h3>Post-Production</h3>
+                    <p>Expert editing and retouching to ensure your memories look their absolute best.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    .section-padding { padding: 100px 0; }
+    .bg-light { background-color: var(--light-gray); }
     
-     <nav id="navbar">
-      <label data-aos="zoom-out-up"><img src="/image/monsef-logo-removebg-preview.png" class="logo" alt=""></label>
-      <ul id="navul">
-        <li><a id="nava" class="active" href="/">Home</a></li>
-        <li><a id="nav3" href="/#about-us">About</a></li>
-        <li><a id="nav2"  href="/gallery">Gallery</a></li>
-        <li><a id="nav" href="/service">Service</a></li>
-        <li><a id="nav1" href="http://www.youtube.com/@Monsef_media">Documentaries</a></li>
-        <li><a id="nav4" href="/contact">Contact Us</a></li>
-          
-        
-      </ul>
-      <label id="icon">
-          <i class="fa fa-bars"></i>
-      </label>
-  </nav>
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
     
-   </div>
-   <!-- NAVBAR END -->
-   <div class="slideshow-container" id="slider">
+    .about-image img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+    }
     
-    <!-- Full-width images with number and caption text -->
+    .stats-grid {
+        display: flex;
+        gap: 40px;
+        margin-top: 30px;
+    }
     
-  <div class="mySlides fade">
-  
-   <img src="image/hero1.jpg" >
-   <div class="slider-text">
-    <h1>WELCOME TO MONSEF MEDIA AND ENTERTAINMENT <br> </h1>
-      <i> Streaming your dream</i> <br> <br>
-     
-    <p>"Step into the Spotlight: Where Imagination Meets Reality. <br> Capturing Moments, Igniting your imaginations, Creating Dreams. <br>
-       MONSEF MEDIA AND ENTERTAINMENT - Streaming Your Dreams in Every Frame."
-    </p>
-    <button><a href="https://wa.me/+2348107575289">Book Us</a></button> 
- </div>
-
- </div>
- 
-   </div>
-
-
- <div class="mySlides fade">
-   
-   <img src="image/hero2.png" >
-   <div class="slider-text">
-    <h1>PROFESSIONAL PHOTOSHOOT <br> </h1>
-      
-     
-    <p>We bring into reality your imaginations and celebrations through the power of our lens. <br>
-      Your Story and moments, Our Lens
-    </p>
-   
-  </div>
- </div>
-
- <div class="mySlides fade">
-  
-   <img src="image/hero3.png" >
-   <div class="slider-text">
-    <h1>EVENT COVERAGE <br> </h1>
-       <br>
-     
-    <p>We create memories for your events. Every Moment Matters. <br>
-      We Cover Your Events, Craft Your Stories. Your Events, Our Expertise."
-    </p>
+    .stat-num {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        font-family: var(--font-heading);
+    }
     
-  </div>
- </div>
- 
- <div class="mySlides fade">
-  
-  <img src="image/heroo4.png" >
-  <div class="slider-text">
-   <h1>Photo studio session <br> </h1>
-      <br>
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
     
-   <p>We bring into reality your imaginations and celebrations through the power of our lens. <br>
-    Your Story and moments, Our Lens
-   </p>
-   
- </div>
-</div>
-
-<div class="mySlides fade">
-  
- <img src="image/hero5.png" >
- <div class="slider-text">
-  <h1>BABY PHOTOSHOOT<br> </h1>
-     <br>
-   
-  <p>Tiny Smiles, Big Memories. 
-    Adorable moments, <br>Cherishing Baby's Firsts, One Click at a Time, Forever Captured.
-  </p>
-  
-</div>
-</div>
-
-<div class="mySlides fade">
-  
- <img src="image/DSC_3219.png" >
- <div class="slider-text">
-  <h1>FAMILY PHOTOSHOOT<br> </h1>
-     <br>
-   
-  <p>Tiny Smiles, Big Memories. 
-    Adorable moments, <br>Cherishing Baby's Firsts, One Click at a Time, Forever Captured.
-  </p>
-  
-</div>
-</div>
-<div class="mySlides fade">
-  
- <img src="images/video.jpg" >
- <div class="slider-text">
-  <h1 style=" background-color:#000000c2 ">VIDEO COVERAGE<br> </h1>
-     <br>
-   
-  <p>"Lights, Camera, Unforgettable Action! <br> Cinematic Stories in Every Frame.
-  </p>
-  
-</div>
-</div>
-
- <!-- Next and previous buttons -->
- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
- <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-<br>
-
- <!-- ABOUT SECTION -->
-
- <div class="body1">
+    .service-card {
+        background: var(--white);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        transition: var(--transition);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
     
-  <div class="about-us " id="about-us">
- 
-   <div class="inner-container"  data-aos="zoom-out-up">
-     <h1>About Us</h1>
-     <p class="text">
-       <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, quae veritatis sed nostrum dolore soluta delectus magni quod fugiat culpa tenetur! Asperiores aut pariatur culpa maiores laboriosam debitis animi porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab vitae eum corporis. Iure, debitis rem. Expedita hic debitis tempora cum deserunt reprehenderit, quibusdam molestiae quae at similique explicabo sit. -->
-       Monsef Media and Entertainment specializes in photo studio brilliance, cinematic videos, and seamless event coverage, capturing extraordinary moments with authenticity and flair. From milestone celebrations to corporate events, our skilled team turns visions into vibrant stories. Our state-of-the-art studio and on-location coverage ensure every unique moment is beautifully immortalized. 
-       Monsef Media—where excellence meets creativity, transforming ordinary instances into extraordinary memories.
-
-     </p>
-     <div class="skills">
-       <span>Photography</span>
-       <span>Video coverage</span>
-       <span>Makeup</span>
-     </div>
-   </div>
-  </div>
- </div>
- <!-- ABOUT ENDS -->
- 
-<!-- join us -->
- <div class="join-us">
-  <h1>Picture-Perfect Plans Today?</h1>
-  <p>Got photo plans? Ready to turn today’s moments into everlasting memories? <br>
-     Book your photo adventures with us and lets make magic together.
- 
-
-  </p>
-  <br>
-  <a href="https://wa.me/+2348107575289" class="slot"><button class="slot-buton">Book a slot</button></a>
- </div>
- <!-- join us -->
-
- <!-- footer -->
- <footer class="foot">
-
-        
-       
+    .service-card i {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
     
-    
-    <div class="social-links">
-      <!-- Social media icons -->
-     <a href="https://web.facebook.com/people/Monsef-Media/100064192656570/"> <i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/monsef_media/"><i class="fa-brands fa-instagram"></i></a>
-      <a href=""><i class="fa-brands fa-twitter"></i></a>
-      <a href="http://www.youtube.com/@Monsef_media"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-    <p class="copyright">© 2023  All rights reserved.</p>
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
 
-  
-</footer>
+    @media (max-width: 768px) {
+        .about-grid, .services-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
 
- </div>
-
-<a href="https://wa.me/+2348107575289" class="whatsapp-float" target="_blank">
-  <!-- <img src="whatsapp-icon.png" alt="WhatsApp Icon"> -->
-  <i class="fab fa-whatsapp" style="overflow: hidden;"></i>
-</a>
-
- <script>
-  $(document).ready(function(){
-    $('#icon').click(function(){
-        $('ul').toggleClass('show');
-    });
-});
-
-</script>
 <script>
- let slideIndex = 0;
+    // Hero Slider
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
 
-showSlides();
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 4000); // Change image every 5 seconds
-}
+    setInterval(nextSlide, 5000);
 </script>
-</body>
-</html>
+
+<%- include('partials/footer') %>
